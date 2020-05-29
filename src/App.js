@@ -22,8 +22,9 @@ class People extends Component {
   return (
     <div style={{margin: '0 auto 60px auto', width: '500px', border: '1px solid black', padding: '20px', borderRadius: '4px'}} >
     <img src={this.props.people.picture.large} alt={'random people'} />
-  <button onClick={this.handleClick} >{this.state.isLiked ? <div> Hide Details: {this.props.people.location.country}, {this.props.people.email}, {this.props.people.dob.age}</div> : 'Show Details'}</button>
+  <button onClick={this.handleClick} >{this.state.isLiked ? <div> Hide Details</div> : 'Show Details'}</button>
   <div>{this.props.people.name.first} {this.props.people.name.last}</div>
+  {this.state.isLiked ? <div>{this.props.people.location.country}, {this.props.people.email}, {this.props.people.dob.age}</div> : ''}
     </div>
   );
 }
